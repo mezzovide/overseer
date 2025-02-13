@@ -121,7 +121,7 @@
     }
     :log debug message=("Processing route: " . $routingTable . " with active state: " . $isActive)
 
-    # Check if the routingTable ends with "-L" and remove the "L"
+    # Set routingTableForMatch without trailing "-L" if present.
     :if ($routingTable ~ ".*-L") do={
         :set routingTableForMatch [:pick $routingTable 0 ([:len $routingTable] - 1)]
     }
