@@ -1,4 +1,4 @@
-# RouterOS PCC and Flapping Management Script (Overseer)
+# Overseer
 
 ## Overview
 **Overseer** is a Mikrotik RouterOS script designed to monitor blackhole routes (distance 100, non-main routing-table) for flapping events. It employs a cooldown mechanism to avoid counting rapid repeated flaps, escalating the disable duration of PCC (per-connection-classifier) rules when necessary and reducing it when routes stabilize.
